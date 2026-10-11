@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>校园探索家 · Campus Explorer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+  <div id="profile-modal" class="modal" hidden>
+    <div class="modal-card">
+      <button id="profile-close" class="modal-close" aria-label="关闭">×</button>
+      <h2>👤 我的主页</h2>
+      <div id="profile-pet"></div>
+      <label class="profile-label">我的简介</label>
+      <textarea id="profile-bio" rows="3" maxlength="200" placeholder="写点什么，让大家了解你…"></textarea>
+      <div class="profile-hint">最多 200 字 · 保存在本机</div>
+      <div id="profile-stats"></div>
+    </div>
+  </div>
+<body>
+  <header>
+    <div class="title">
+      <h1>🏫 校园探索家</h1>
+      <p>点亮 12 个校园角落，成为真正的校园探索家</p>
+    </div>
+    <div class="controls">
+      <label class="switch">
+        <input type="checkbox" id="demo-toggle" />
+        <span>🧪 演示模式（跳过定位）</span>
+      </label>
+       <button id="profile-btn">👤 我的主页</button>
+      <div class="progress">
+        <div class="progress-text">
+          已点亮 <span id="done-count">0</span> / <span id="total-count">0</span> 个任务
+        </div>
+        <div class="progress-bar"><div id="progress-fill"></div></div>
+      </div>
+    </div>
+  </header>
+    <section id="pet-section">
+    <div id="pet-card">
+      <div id="pet-avatar">🥚</div>
+      <div id="pet-info">
+        <div id="pet-name-row">
+          <span id="pet-name">团团</span>
+          <span id="pet-stage">精灵蛋</span>
+          <span id="pet-stage-desc">完成第一次打卡来孵化它</span>
+        </div>
+        <div id="pet-mood">蛋壳里传来轻轻的晃动…</div>
+        <div id="pet-stats"></div>
+      </div>
+    </div>
+  </section>
+<section id="daily-section">
+    <h2>🎯 今日任务</h2>
+    <p class="daily-hint">每天 0 点刷新 · 点击任务可跳转到对应地点</p>
+    <div id="daily-list"></div>
+  </section>
+  <main>
+    <div id="map-wrap">
+       <div id="map-wrap">
+      <img id="campus-map" src="map.png" alt="深圳大学粤海校区地图（来源：深圳大学官微）" />
+      <div id="map-overlay" aria-hidden="true"></div>
+      <!-- 打卡点由 app.js 动态生成 -->
+    </div>
+      <div id="map-overlay" aria-hidden="true"></div>
+      <!-- 打卡点由 app.js 动态生成 -->
+    </div>
+
+    <aside id="panel">
+      <div id="panel-empty">👆 点击地图上的点位<br />开始你的探索</div>
+      <div id="panel-content" hidden>
+        <button id="panel-close" aria-label="关闭">×</button>
+        <div id="panel-spot"></div>
+      </div>
+    </aside>
+  </main>
+
+  <section id="badges">
+    <h2>🏅 成就徽章</h2>
+    <div id="badge-list"></div>
+  </section>
+
+  <footer>
+    <button id="reset-btn">重置进度</button>
+    <p>进度保存在本机浏览器 · 定位仅用于验证打卡距离，不上传</p>
+  </footer>
+    <div id="profile-modal" class="modal" hidden>
+    <div class="modal-card">
+      <button id="profile-close" class="modal-close" aria-label="关闭">×</button>
+      <h2>👤 我的主页</h2>
+      <div id="profile-pet"></div>
+      <label class="profile-label">我的简介</label>
+      <textarea id="profile-bio" rows="3" maxlength="200" placeholder="写点什么，让大家了解你…"></textarea>
+      <div class="profile-hint">最多 200 字 · 保存在本机</div>
+      <div id="profile-stats"></div>
+    </div>
+  </div>
+  <div id="toast"></div>
+  <div id="debug-panel" hidden></div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
