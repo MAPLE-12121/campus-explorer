@@ -58,7 +58,7 @@ const SPOTS = [
  {
     id: "zhai-dorm", name: "斋区宿舍", icon: "🛏️",
     x: 60, y: 42, category: "life",
-    lat: 22.5403, lng: 113.9297, radius: 200,
+    lat: 22.5403, lng: 113.9297, radius: 400,
     tasks: [
       { id: "zhai-1", title: "整理桌面并拍照记录", points: 10 },
       { id: "zhai-2", title: "和室友拍一张合照", points: 15 },
