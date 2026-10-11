@@ -105,4 +105,4 @@ hidden: true：隐藏点；unlockAt 或 unlockAfterSpot：解锁条件
 姓名：朱子轩
 学号：2026270148
 GitHub：https://github.com/MAPLE-12121/campus-explorer
-项目日期：2026 年 10 月
+项目日期：2026 年 10 月 11 日
